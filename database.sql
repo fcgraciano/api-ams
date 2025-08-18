@@ -15,6 +15,6 @@ create table Notas(
     Id int primary key auto_increment,
     Id_Materia int,
     Id_Aluno int,
-    Constraint FK_NOTAS_ALUNOS Foreign key Id_Aluno References Alunos(Id),
-    Constraint FK_NOTAS_Materias Foreign key Id_Materia References Materias(Id),
+    Constraint FK_NOTAS_ALUNOS Foreign key (Id_Aluno) References Alunos(Id),
+    Constraint FK_NOTAS_Materias Foreign key (Id_Materia) References Materias(Id)
 );
