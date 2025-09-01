@@ -16,7 +16,7 @@
             <th>Disponivel</th>
         </thead>
         <tbody id="corpoTabela" >
-<!--Proxima aula aquiiiiiiiiiiiiiiii-->
+
         </tbody>
     </table>
     <h2>Cadastro de Novas Matérias</h2>
@@ -51,7 +51,7 @@
                     td_Id.innerText = valor.Id
 
                     var td_Nome = document.createElement("td")
-                    td_Nome.innerText = valor.Nome
+                    td_Nome.innerText = valor.Materia
 
                     var td_Disponivel = document.createElement("td")
                     td_Disponivel.innerText = valor.Disponivel
@@ -59,6 +59,9 @@
                     tr.append(td_Id)
                     tr.append(td_Nome)
                     tr.append(td_Disponivel)
+
+                    var tabela = document.getElementById("corpoTabela")
+                    tabela.appendChild(tr)
 
                 })
 
