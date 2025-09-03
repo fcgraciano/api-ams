@@ -35,7 +35,23 @@
     <script>
         function cadastrar()
         {
-
+            fetch('http://localhost/api-ams/rotas/materias.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                            body: JSON.stringify({
+                                "Materia" : "",
+                                "Disponivel" : ""
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log("Resposta da API:", data);
+                        })
+                        .catch(error => {
+                            console.error("Erro ao enviar requisição:", error);
+                        });
         }
         function atualizarTabela()
         {
