@@ -39,17 +39,17 @@ switch($metodoSolicitado){
                 $stmt->bind_param("ss", $nome_materia, $disponivel);
 
                 if ($stmt->execute()) {
-                    echo json_encode(["mensagem" => "Matéria inserida com sucesso"]);
+                    
                 } else {
                     http_response_code(500);
-                    echo json_encode(["erro" => "Erro ao inserir: " . $stmt->error]);
+                    
                 }
 
                 $stmt->close();
                 $conexao->close();
-                echo json_encode($dados_recebidos)
+                echo json_encode($dados_recebidos);
             }else{
-                echo json_encode("{'erro':'dados inválidos'}")
+                echo json_encode("{'erro':'dados inválidos'}");
             }
         break;
     case "GET":
