@@ -73,7 +73,7 @@
             .then(dados =>{
                 console.log(dados)
                  var tabela = document.getElementById("corpoTabela")
-                 tabela.remove()
+                 tabela.innerHTML = "";
                 dados.map((valor, indice)=>{
 
                     var tr = document.createElement("tr")
