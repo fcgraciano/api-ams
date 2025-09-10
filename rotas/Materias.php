@@ -52,7 +52,7 @@ switch($metodoSolicitado){
                 echo json_encode("{'erro':'dados inválidos'}");
             }
         break;
-    case "GET":
+    case "GET": 
          
         $servidor = "localhost"; 
         $usuario = "root"; 
